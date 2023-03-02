@@ -1,0 +1,46 @@
+﻿@model PokemonFetching.Models.VMLogin;
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+
+<body>
+    <div class="login">
+        <h1>Login</h1>
+
+        <form method="post" asp-controller="Access" asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <p>
+                <input type="text" name="Email" asp-for="Email" value="" placeholder="Email..." >
+                <span asp-validation-for="Email" class="text-danger" style="color: red;"></span>
+                </p>
+            <p>
+                <input type="password" name="Password" asp-for="Password" value="" placeholder="Password..." >
+                <span asp-validation-for="Password" class="text-danger" style="color: red;"></span>
+                </p>
+            <p class="remember_me">
+                <label>
+                    <input type="checkbox" name="KeepLoggedIn" asp-for="KeepLoggedIn" id="remember_me">
+                    Keep me Logged In
+                </label>
+            </p>
+            <br />
+            <br />
+            <br />
+            You don't have account? <a style="margin-top: 10px; width: 100%; font-size: 12px;" asp-controller="Access" asp-action="Register" class="btn btn-sm btn-secondary">Register now</a>
+            <input style="margin-top: 10px; margin-bottom: 5px; width: 85%;" class="btnLogin" type="submit" name="commit" value="Login">
+                <hr />
+            @if (ViewData["ValidateMessage"] != null)
+            {
+                    <br />
+                <label style="color: #ff3333; text-align: center; width: 100%; font-size: 15px; font-weight: 700;">@ViewData["ValidateMessage"]</label>
+                }
+        </form>
+    </div>
+</body>
+</html>
+
+@{
+    Layout = null;
+}

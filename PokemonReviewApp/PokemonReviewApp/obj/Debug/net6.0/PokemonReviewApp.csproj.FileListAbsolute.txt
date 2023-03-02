@@ -1,0 +1,54 @@
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\appsettings.json
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.exe
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.deps.json
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.runtimeconfig.json
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.pdb
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.csproj.AssemblyReference.cache
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.AssemblyInfoInputs.cache
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.AssemblyInfo.cs
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.csproj.CoreCompileInputs.cache
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\scopedcss\bundle\PokemonReviewApp.styles.css
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.csproj.CopyComplete
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\refint\PokemonReviewApp.dll
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.pdb
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.genruntimeconfig.cache
+C:\Users\oghieh\Desktop\ASP.net API\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\ref\PokemonReviewApp.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\appsettings.json
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.exe
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.deps.json
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.runtimeconfig.json
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.pdb
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.csproj.AssemblyReference.cache
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.AssemblyInfoInputs.cache
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.AssemblyInfo.cs
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.csproj.CoreCompileInputs.cache
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\scopedcss\bundle\PokemonReviewApp.styles.css
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.csproj.CopyComplete
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\refint\PokemonReviewApp.dll
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.pdb
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.genruntimeconfig.cache
+C:\Users\oghieh\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\ref\PokemonReviewApp.dll

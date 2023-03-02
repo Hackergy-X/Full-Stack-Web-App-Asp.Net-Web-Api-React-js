@@ -1,0 +1,33 @@
+﻿@model UserDto
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+
+<body>
+    <div class="login">
+        <h1>Login to Web App</h1>
+
+        <form method="post" asp-controller="Login" asp-action="Login">
+            <p><input type="text" name="Username" value="" placeholder="Username.." required></p>
+            <p><input type="password" name="Password" value="" placeholder="Password.." required></p>
+            <p class="remember_me">
+                <label>
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    Remember me on this computer
+                </label>
+            </p>
+            <input style="margin-top: 10px; width: 85%;" class="btnLogin" type="submit" name="commit" value="Login">
+            <a style="margin-top: 10px; width: 100%;" asp-controller="Register" asp-action="Index" class="btn btn-sm btn-secondary">Register</a>
+                <hr />
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('header').empty();
+            $('footer').empty();
+        });
+    </script>
+</body>
+</html>

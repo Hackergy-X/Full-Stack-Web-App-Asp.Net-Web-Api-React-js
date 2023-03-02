@@ -1,0 +1,38 @@
+﻿@model Country
+@{
+    ViewBag.Title = "Add a Country";
+}
+
+<h2>Add a Country <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
+<form asp-action="AddPokemon" method="post">
+    <div class="form-group">
+        <label for="id">ID:</label>
+        <input class="form-control" value="0" name="id" readonly/>
+    </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input class="form-control" name="name" />
+    </div>
+    <div class="text-center panel-body mt-4">
+        <button type="submit" class="btn btn-sm btn-primary w-100">Add</button>
+    </div>
+</form>
+
+@if (ViewBag.Result == "Success")
+{
+    <h2>Country</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.id</td>
+                <td>@Model.name</td>
+            </tr>
+        </tbody>
+    </table>
+}

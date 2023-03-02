@@ -1,0 +1,19 @@
+﻿@model Country
+@{
+    ViewBag.Title = "Update a Country";
+}
+
+<h2>Update a Country <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="id"></label>
+        <input class="form-control" asp-for="id" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="name"></label>
+        <input class="form-control" asp-for="name" />
+    </div>
+    <div class="text-center panel-body mt-4">
+        <button type="submit" class="btn btn-sm btn-primary w-100">Update</button>
+    </div>
+</form>
