@@ -32,13 +32,14 @@ namespace PokemonFetching.Controllers
         {
             if (ModelState.IsValid)
             {
-                VMLogin receiveLogin = new VMLogin();
                 using (var httpClient = new HttpClient())
                 {
+                    
                     var content = new StringContent(JsonConvert.SerializeObject(modelLogin), Encoding.UTF8, "application/json");
                     using (var response = await httpClient.PostAsync(api + "/Registration/login", content))
                     {
                         string apiResponse = await response.Content.ReadAsStringAsync();
+
                         if (response.ReasonPhrase == "OK")
                         {
                             List<Claim> claims = new List<Claim>()
@@ -59,7 +60,12 @@ namespace PokemonFetching.Controllers
                             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                                 new ClaimsPrincipal(claimsIdentity), properties);
 
-                            return RedirectToAction("Index", "Home", modelLogin);
+                            var cookieOptions = new CookieOptions();
+                            cookieOptions.Expires = DateTime.Now.AddDays(1);
+                            cookieOptions.Path = "/";
+                            Response.Cookies.Append("Email", modelLogin.Email, cookieOptions);
+
+                            return RedirectToAction("Index", "Home");
                         }
                     }
                 }

@@ -8,7 +8,9 @@ namespace PokemonFetching.Models
         public int id { get; set; }
         public string name { get; set; }
 
-        public string ownerName { get; set; }
+        public string firstName { get; set; }
+
+        public string lastName { get; set; }
 
         public ICollection<Owner> Owners { get; set; }
     }

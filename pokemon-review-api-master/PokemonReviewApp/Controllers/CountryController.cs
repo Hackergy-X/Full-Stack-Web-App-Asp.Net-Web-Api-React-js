@@ -34,7 +34,7 @@ namespace PokemonReviewApp.Controllers
             // get countries by query from sqlserver and get owenerName by join from Owner table
 
             var connectionString = _configuration.GetConnectionString("DefaultConnection");
-            var query = "SELECT c.Id, c.Name, o.Id, o.FirstName FROM Countries c JOIN Owners o ON c.Id = o.CountryId";
+            var query = "SELECT c.Id, c.Name, o.Id, o.FirstName, o.LastName FROM Countries c JOIN Owners o ON c.Id = o.CountryId";
 
             using (var connection = new SqlConnection(connectionString))
             {
@@ -50,7 +50,8 @@ namespace PokemonReviewApp.Controllers
                         {
                             Id = (int)reader["Id"],
                             Name = reader["Name"].ToString(),
-                            OwnerName = reader["FirstName"].ToString()
+                            FirstName = reader["FirstName"].ToString(),
+                            LastName = reader["LastName"].ToString()
                         });
                     }
 

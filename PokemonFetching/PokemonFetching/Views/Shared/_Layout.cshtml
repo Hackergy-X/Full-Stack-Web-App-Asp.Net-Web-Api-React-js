@@ -1,10 +1,11 @@
 ﻿
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PokemonFetching</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PokemonFetching.styles.css" asp-append-version="true" />
@@ -28,12 +29,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Chart">Chart</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="LogOut">Logout</a>
-                        </li>
                     </ul>
                 </div>
             </div>
+
+            <a class="nav-link text-light d-flex m-2" asp-area="" asp-controller="Home" asp-action="LogOut"><i class="bi bi-box-arrow-left text-light px-1"></i>Logout</a>
         </nav>
     </header>
     <div class="container">
@@ -44,7 +44,7 @@
 
     <footer class="border-top footer text-light bg-dark" style="border: 2px solid black; border-top-right-radius: 20px; border-top-left-radius: 20px;">
         <div class="container text-ligth">
-            &copy; 2023 - PokemonFetching - <a asp-area="" asp-controller="Home" asp-action="Index">Countries</a>
+            &copy; 2023 - Countries - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

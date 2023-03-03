@@ -8,7 +8,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Kendo UI using CDN</title>
 
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2023.1.117/styles/kendo.default-ocean-blue.min.css">
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2023.1.117/styles/kendo.default-main.min.css">
@@ -146,15 +145,12 @@
             fields: {
             id: { editable: false, nullable: true },
             name: { validation: { required: true } },
-            ownerName: { validation: { required: true } },
+            firstName: { validation: { required: true } },
+            lastName: { validation: { required: true } },
             }
             }
             }
             });
-
-
-
-
 
                 $("#grid").kendoGrid({
                     dataSource: dataSource,
@@ -187,20 +183,25 @@
                         template: "<div class='product-name'>#: name #</div>",
                         width: 300
                     }, {
-                        field: "ownerName",
-                        title: "Owner Name",
-                        template: "<div class='product-name'>#: ownerName #</div>",
+                        field: "firstName",
+                        title: "Owner FirstName",
+                        template: "<div class='product-name'>#: firstName #</div>",
                         width: 300
-                    },{
+                    }, {
+                        field: "lastName",
+                        title: "Owner LastName",
+                        template: "<div class='product-name'>#: lastName #</div>",
+                        width: 300
+                    }, {
                         field: "id",
                         title: "Update",
-                        template: "<a href='/Home/UpdateCountry?id=#: id #'><img width='20' height=\"20\" src=@Url.Content("~/Images/edit.png") /></a>",
+                        template: "<a href='/Home/UpdateCountry?id=#: id #'><img width='30' height=\"30\" src=@Url.Content("~/Images/edit.png") /></a>",
                         width: 300
                     },
                     {
                         field: "id",
                         title: "Delete",
-                        template: "<a href='/Home/DeleteCountry?id=#: id #'><img width='20' height=\"20\" src=@Url.Content("~/Images/delete.png")  /></a>",
+                        template: "<a href='/Home/DeleteCountry?id=#: id #'><img width='30' height=\"30\" src=@Url.Content("~/Images/delete.png")  /></a>",
                         width: 300
                     }
                     ],
@@ -299,7 +300,7 @@
                         dataSource: {
                             transport: {
                                 read: {
-                                    url: " https://demos.telerik.com/kendo-ui/service/countries",
+                                    url: "https://demos.telerik.com/kendo-ui/service/countries",
                                     dataType: "jsonp"
                                 }
                             }

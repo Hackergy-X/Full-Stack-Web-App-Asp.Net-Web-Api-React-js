@@ -1,12 +1,15 @@
 ﻿@model PokemonFetching.Models.VMLogin;
+
 <html>
 <head>
 
     <link rel="stylesheet" href="~/css/style.css" />
 </head>
 
-<body>
-    <div class="login">
+<body style="background-color: #171717;">
+    <div class="login" style="box-shadow: 3px 5px 40px 3px rgba(255,255,255,0.75);
+-webkit-box-shadow: 3px 5px 40px 3px rgba(255,255,255,0.75);
+-moz-box-shadow: 3px 5px 40px 3px rgba(255,255,255,0.75); border-radius: 10px;">
         <h1>Login</h1>
 
         <form method="post" asp-controller="Access" asp-action="Login">
