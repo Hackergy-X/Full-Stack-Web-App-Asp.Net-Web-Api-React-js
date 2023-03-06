@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script src="https://kendo.cdn.telerik.com/2023.1.117/js/jquery.min.js"></script>
+
+
+    <script src="https://kendo.cdn.telerik.com/2023.1.117/js/kendo.all.min.js"></script>
+
+    <style>
+        html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+    <body>
+    <div id="example" style="padding-top: 100px;">
+        <div class="demo-section">
+            <div id="validation-success"></div>
+
+            <form id="exampleform"></form>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var validationSuccess = $("#validation-success");
+
+                $("#exampleform").kendoForm({
+                    orientation: "vertical",
+                    formData: {
+                        Username: "omar",
+                        Email: "ghiehomar@gmail.com",
+                        Password: "omar123",
+                        Birth: new Date(),
+                        Agree: false
+                    },
+                    items: [{
+                        type: "group",
+                        label: "Contact Us Form",
+                        items: [
+                            { field: "Username", label: "Username:", validation: { required: true } },
+                            { field: "Email", label: "Email:", validation: { required: true, email: true } },
+                            {
+                                field: "Password",
+                                label: "Password:",
+                                validation: { required: true },
+                                hint: "Hint: enter alphanumeric characters only.",
+                                editor: function (container, options) {
+                                    $('<input type="password" id="Password" name="' + options.field + '" title="Password" required="required" autocomplete="off" aria-labelledby="Password-form-label" data-bind="value: Password" aria-describedby="Password-form-hint"/>')
+                                        .appendTo(container)
+                                        .kendoTextBox();
+                                }
+                            },
+                            { field: "Birth", label: { text: "Date of birth:", optional: true } },
+                            { field: "Agree", label: "Agree to Terms:", validation: { required: true } }
+
+                        ]
+                    }],
+                    validateField: function (e) {
+                        e.preventDefault();
+                        validationSuccess.html("<div class='k-messagebox k-messagebox-error'>Form data is Not Valid!</div>");
+                    },
+                    submit: function (e) {
+                        e.preventDefault();
+                        e.sender.element.find("button[type=submit]").text("Submitting...");
+
+                        setTimeout(function () {
+                            e.sender.element.find("button[type=submit]").text("Submit");
+                            validationSuccess.html("<div class='k-messagebox k-messagebox-success'>Form data is submitted Successfully!</div>");
+                        }, 3000);
+                            
+                    },
+                    clear: function (ev) {
+                        validationSuccess.html("");
+                    }
+                });
+            });
+        </script>
+    </div>
+    </body>
+</html>
