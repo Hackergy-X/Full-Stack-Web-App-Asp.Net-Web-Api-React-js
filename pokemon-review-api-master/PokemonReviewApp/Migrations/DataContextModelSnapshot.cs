@@ -42,10 +42,7 @@ namespace PokemonReviewApp.Migrations
             modelBuilder.Entity("PokemonReviewApp.Models.Country", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -59,10 +56,7 @@ namespace PokemonReviewApp.Migrations
             modelBuilder.Entity("PokemonReviewApp.Models.Owner", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CountryId")
                         .HasColumnType("int");

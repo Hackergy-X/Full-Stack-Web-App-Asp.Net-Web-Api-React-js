@@ -12,8 +12,8 @@ using PokemonReviewApp.Data;
 namespace PokemonReviewApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230222074714_thirdM")]
-    partial class thirdM
+    [Migration("20230306115556_myMiIdentityON")]
+    partial class myMiIdentityON
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,10 +44,7 @@ namespace PokemonReviewApp.Migrations
             modelBuilder.Entity("PokemonReviewApp.Models.Country", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -61,10 +58,7 @@ namespace PokemonReviewApp.Migrations
             modelBuilder.Entity("PokemonReviewApp.Models.Owner", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CountryId")
                         .HasColumnType("int");

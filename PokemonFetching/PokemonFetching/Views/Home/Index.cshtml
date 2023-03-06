@@ -57,20 +57,21 @@ background-color: #000000;
                     </form>
                 </div>
                 <div class="modal-footer">
-                        <table class="table table-sm table-striped table-bordered m-2">
+                        <table id="tableDisplay" class="table table-sm table-striped table-bordered m-2">
                             <thead>
-                                <tr>
+                            <tr>
                                     <th>ID</th>
                                     <th>Name</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                            <tr>
                                     <td id="CountryId"></td>
                                     <td id="CountryName"></td>
                                 </tr>
                             </tbody>
                         </table>
+                    <h4 id="errorHandling" style="text-align: center; font-weight: 700; color: red; display: none; width: 100%;">Country Not Found!</h4>
                 </div>
             </div>
         </div>
@@ -116,8 +117,7 @@ background-color: #000000;
         <div id="grid"></div>
         <script>
             $(document).ready(function () {
-                // click on button of id getCountryById then pass paremeter with input with id inputId on this api https://localhost:7046/api/Country/ then print the data for id in CountryId and Name in CountryName
-
+            $("#tableDisplay").css("display", "none");
             $("#getCountryById").click(function (e) {
                     e.preventDefault();
                     var id = $("#inputId").val();
@@ -126,11 +126,14 @@ background-color: #000000;
                         type: "GET",
                         dataType: "json",
                         success: function (data) {
+                            $("#tableDisplay").css("display", "block");
+                            $("#errorHandling").css("display", "none");
                             $("#CountryId").text(data.id);
                             $("#CountryName").text(data.name);
                         },
                         error: function (xhr, status, error) {
-                            alert("Error: Country Not Found!");
+                            $("#errorHandling").css("display","block");
+                            $("#tableDisplay").css("display", "none");
                         }
                     });
                 });
@@ -227,10 +230,26 @@ background-color: #000000;
                     {
                         field: "id",
                         title: "Delete",
-                        template: "<a href='/Home/DeleteCountry?id=#: id #'><img width='30' height=\"30\" src=@Url.Content("~/Images/delete.png")  /></a>",
+                        template: "<a id='deleteBtn' href='#: id #'><img width='30' height=\"30\" src=@Url.Content("~/Images/delete.png") /></a>",
                         width: 300
                     }
                     ],
+                });
+
+                // Delete Country
+                $(document).on("click","#deleteBtn", function (e) {
+                    e.preventDefault();
+                    var id = $(this).attr("href");
+                        $.ajax({
+                            url: "https://localhost:7046/api/Country/" + id,
+                            type: "DELETE",
+                            success: function (data) {
+                            $("#grid").data("kendoGrid").dataSource.read();
+                            },
+                            error: function (xhr, status, error) {
+                                alert("Error - Delete Country!");
+                            }
+                        });
                 });
             });
 
