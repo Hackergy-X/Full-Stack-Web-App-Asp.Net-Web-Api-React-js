@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using PokemonFetching.Models;
 using Newtonsoft.Json;
 using System.Text;
+using System.Windows;
 
 namespace PokemonFetching.Controllers
 {
@@ -45,6 +46,7 @@ namespace PokemonFetching.Controllers
                             List<Claim> claims = new List<Claim>()
                     {
                         new Claim(ClaimTypes.NameIdentifier, modelLogin.Email),
+                        new Claim(ClaimTypes.Name, modelLogin.Email),
                         new Claim("OtherProperties","Example Role")
                     };
 
@@ -64,6 +66,8 @@ namespace PokemonFetching.Controllers
                             cookieOptions.Expires = DateTime.Now.AddDays(1);
                             cookieOptions.Path = "/";
                             Response.Cookies.Append("Email", modelLogin.Email, cookieOptions);
+
+
 
                             return RedirectToAction("Index", "Home");
                         }

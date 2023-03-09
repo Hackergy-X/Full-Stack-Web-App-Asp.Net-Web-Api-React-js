@@ -8,6 +8,8 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Localization;
 
 namespace PokemonFetching.Controllers
 {
@@ -16,11 +18,12 @@ namespace PokemonFetching.Controllers
     {
         private readonly IConfiguration _configuration;
         public string api;
-
-        public HomeController(IConfiguration configuration)
+        private readonly IStringLocalizer<HomeController> _stringLocalizer;
+        public HomeController(IConfiguration configuration, IStringLocalizer<HomeController> stringLocalizer)
         {
             _configuration = configuration;
             api = _configuration.GetValue<string>("API");
+            _stringLocalizer = stringLocalizer;
         }
         public async Task<IActionResult> Index()
         {
@@ -35,7 +38,25 @@ namespace PokemonFetching.Controllers
                     reservationList = JsonConvert.DeserializeObject<List<Country>>(apiResponse);
                 }
             }
+            ViewData["Country"] = _stringLocalizer["Country"].Value;
+            ViewData["Chart"] = _stringLocalizer["Chart"].Value;
+            ViewData["Contact"] = _stringLocalizer["Contact"].Value;
             return View(reservationList);
+        }
+
+        [HttpPost]
+        public IActionResult ChangeLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                    new CookieOptions
+                    {
+                        Expires = DateTimeOffset.UtcNow.AddDays(7)
+                    }
+            );
+
+            return LocalRedirect(returnUrl);
         }
 
         public ViewResult GetPokemon() => View();
